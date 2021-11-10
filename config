@@ -8,7 +8,7 @@
 [submodule]
 	active = .
 [remote "origin"]
-	url = https://github.com/champierre/sheet2gmap.git
+	url = https://github.com/kaaaazzz018/lcr.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin
