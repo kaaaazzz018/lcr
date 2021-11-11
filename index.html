@@ -81,28 +81,28 @@
           lng: Number(data['経度'])
         });
         switch(String(data['ブランド名'])){        
-          case 'The Chicken':
+          case '치킨 ～The Chicken～':
             url = "https://maps.google.com/mapfiles/ms/icons/blue-dot.png";
             break;
-          case 'B':
+          case 'Oh! Bánh mì':
             url = "https://maps.google.com/mapfiles/ms/icons/green-dot.png";
             break;
-          case 'C':
+          case 'CHIJIMI DEVIL':
             url = "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
             break;
-          case 'D':
+          case '台北夜市大鶏排':
             url = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
             break;
-          case 'E':
+          case '混ぜるな危険':
             url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|0099cc|";
             break;
-          case 'F':
+          case 'とんてき 豪':
             url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=X|6699cc|000000";
             break;
-          case 'G':
+          case 'PHUKET SPICE':
             url = "http://chart.apis.google.com/chart?chst=d_simple_text_icon_left&chld=%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8C%E6%97%A5%E6%9C%AC%EF%BC%81%7C16|00F|flag_ja|16|F88|FFF";
             break;
-          case 'H':
+          case '満腹魯肉飯':
             url = "http://maps.google.co.jp/mapfiles/ms/icons/tree.png";
             break;
         }
@@ -126,6 +126,7 @@
           if (!latitude) { continue; }
           addMarker(i, markerData[i]);
           var name = markerData[i]['名称'];
+          var name = markerData[i]['住所'];
 
           sidebar_html += `<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a><br />`;
         }
