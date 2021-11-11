@@ -75,23 +75,41 @@
       }
 
       function addMarker(i, data) {
+        const url = '';
         var markerLatLng = new google.maps.LatLng({
           lat: Number(data['緯度']),
           lng: Number(data['経度'])
         });
-        if(String(data['ブランド名']) == 'A'){        
-          marker[i] = new google.maps.Marker({
-            position: markerLatLng,
-            map: map,
-            icon :"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",          
-          });
-        }else{
-          marker[i] = new google.maps.Marker({
-            position: markerLatLng,
-            map: map,
-            icon :"https://maps.google.com/mapfiles/ms/icons/green-dot.png",          
-          });
+        switch(String(data['ブランド名'])){        
+          case 'The Chicken':
+            url = "https://maps.google.com/mapfiles/ms/icons/blue-dot.png";
+            break;
+          case 'B':
+            url = "https://maps.google.com/mapfiles/ms/icons/green-dot.png";
+            break;
+          case 'C':
+            url = "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
+            break;
+          case 'D':
+            url = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
+            break;
+          case 'E':
+            url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|0099cc|";
+            break;
+          case 'F':
+            url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=X|6699cc|000000";
+            break;
+          case 'G':
+            url = "http://chart.apis.google.com/chart?chst=d_simple_text_icon_left&chld=%E3%81%8C%E3%82%93%E3%81%B0%E3%82%8C%E6%97%A5%E6%9C%AC%EF%BC%81%7C16|00F|flag_ja|16|F88|FFF";
+            break;
+          case 'H':
+            url = "http://maps.google.co.jp/mapfiles/ms/icons/tree.png";
         }
+        marker[i] = new google.maps.Marker({
+          position : markerLatLng,
+          map : map,
+          icon : url,          
+        });
         var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + data['名称'] + '</div>';
         infoWindow[i] = new google.maps.InfoWindow({
           content: info
