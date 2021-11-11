@@ -82,7 +82,7 @@
         marker[i] = new google.maps.Marker({
           position: markerLatLng,
           map: map,
-          bra: Number(data['ブランド名']),
+          bra: String(data['ブランド名']),
           {icon :
           if(bra=="The Chicken"){"https://maps.google.com/mapfiles/ms/icons/blue-dot.png"}
           else{"https://maps.google.com/mapfiles/ms/icons/green-dot.png"
