@@ -79,13 +79,19 @@
           lat: Number(data['緯度']),
           lng: Number(data['経度'])
         });
-        marker[i] = new google.maps.Marker({
-          position: markerLatLng,
-          map: map,
-          icon :"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-          
-        });
-
+        if(String(data['ブランド名']) == 'A'){        
+          marker[i] = new google.maps.Marker({
+            position: markerLatLng,
+            map: map,
+            icon :"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",          
+          });
+        }else{
+          marker[i] = new google.maps.Marker({
+            position: markerLatLng,
+            map: map,
+            icon :"https://maps.google.com/mapfiles/ms/icons/green-dot.png",          
+          });
+        }
         var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + data['名称'] + '</div>';
         infoWindow[i] = new google.maps.InfoWindow({
           content: info
