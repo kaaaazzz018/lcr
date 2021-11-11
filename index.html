@@ -82,12 +82,13 @@
         marker[i] = new google.maps.Marker({
           position: markerLatLng,
           map: map,
-          bra: String(data['ブランド名']),
-          {icon :
-          if(bra=="The Chicken"){"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",}
-          else{"https://maps.google.com/mapfiles/ms/icons/green-dot.png"
-          }
-        }
+          icon :"https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+          //bra: String(data['ブランド名']),
+          //{icon :
+          //if(bra=="The Chicken"){"https://maps.google.com/mapfiles/ms/icons/blue-dot.png",}
+          //else{"https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+          //}
+        //}
         });
 
         var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + data['名称'] + '</div>';
