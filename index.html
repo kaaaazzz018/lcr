@@ -140,6 +140,7 @@
       function markerEvent(i) {
         marker[i].addListener('click', function() {
           openWindow(i);
+          addMarker(i, markerData[i]);
         });
       }
 
