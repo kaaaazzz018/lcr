@@ -112,7 +112,7 @@
           map : map,
           icon : url,          
         });
-        var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + data['名称'] +'</br>' + data['住所'] + '</br>' + data['ブランド名'] + '</div>';
+        var info = '<div style="font-size:18px;font-weight:bold;margin-bottom:10px;">' + '店舗名:' + data['名称'] +'</br>' + data['住所'] + '</br>' + data['ブランド名'] + '</div>';
         infoWindow[i] = new google.maps.InfoWindow({
           content: info
         });
